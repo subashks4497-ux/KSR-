@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSR Groups - Civil Construction, Pipeline Projects & Consultancy Services</title>
+    <meta name="description" content="KSR Groups - Professional Civil Construction, Pipeline Projects & Consultancy Services. Building Trust, Quality, and Growth.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0b5fa5;
+            --secondary-color: #1282d6;
+            --accent-color: #ff6b00;
+            --accent-light: #ff8c42;
+            --dark-color: #222;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --shadow-heavy: 0 10px 30px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container img {
+            height: 60px;
+            width: auto;
+        }
+
+        .company-name {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .company-name h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .company-name p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* NAVIGATION */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 5px 0;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #ffd166;
+            left: 0;
+            bottom: 0;
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-services {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .hero-service-tag {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 20px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            font-weight: 500;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: 2px solid var(--accent-color);
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 0;
+        }
+
+        section:nth-child(even) {
+            background-color: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+
+        /* ABOUT SECTION */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .director-info {
+            background: var(--light-color);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+            margin-top: 20px;
+        }
+
+        .director-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .about-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image img:hover {
+            transform: scale(1.03);
+        }
+
+        /* SERVICES SECTION */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border-top: 4px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .service-card.civil {
+            border-top-color: #0b5fa5;
+        }
+
+        .service-card.civil:hover .service-icon {
+            background: #0b5fa5;
+        }
+
+        .service-card.pipeline {
+            border-top-color: #1282d6;
+        }
+
+        .service-card.pipeline:hover .service-icon {
+            background: #1282d6;
+        }
+
+        .service-card.consultant {
+            border-top-color: #ff6b00;
+        }
+
+        .service-card.consultant:hover .service-icon {
+            background: #ff6b00;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: white;
+            background: var(--primary-color);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            transition: var(--transition);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            text-align: left;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .service-features li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .service-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* PROJECTS SECTION */
+        .projects-section {
+            background-color: #f8f9fa;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: #e9f5ff;
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* WHY CHOOSE US */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* CONTACT SECTION */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateX(10px);
+        }
+
+        .contact-icon {
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .contact-details a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-details a:hover {
+            color: var(--accent-color);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .submit-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo img {
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .footer-services h3,
+        .footer-links h3,
+        .footer-social h3 {
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .footer-services ul,
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-services li,
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-services a,
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-services a:hover,
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 992px) {
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .nav-menu {
+                display: none;
+                width: 100%;
+                margin-top: 15px;
+            }
+            
+            .nav-menu.active {
+                display: block;
+            }
+            
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            section {
+                padding: 50px 0;
+            }
+            
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .company-name h1 {
+                font-size: 1.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .service-card,
+            .contact-card {
+                padding: 20px;
+            }
+            
+            .hero-services {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="KSR Logo.png" alt="KSR Groups Logo">
+                <div class="company-name">
+                    <h1>KSR GROUPS</h1>
+                    <p>Civil Construction | Pipeline Projects | Consultancy</p>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Excellence in Civil Construction & Pipeline Projects</h2>
+            <p>KSR Groups specializes in professional Civil Construction, Pipeline Projects, and Consultancy Services. We deliver quality, safety, and innovation in every project.</p>
+            
+            <div class="hero-services">
+                <span class="hero-service-tag">Civil Construction</span>
+                <span class="hero-service-tag">Pipeline Projects</span>
+                <span class="hero-service-tag">Professional Consultancy</span>
+            </div>
+            
+            <a href="#contact" class="cta-button">Get a Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About KSR Groups</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>KSR GROUPS</strong> is a leading professional organization specializing in Civil Construction, Pipeline Projects, and Consultancy Services. With years of industry experience, we have built a reputation for excellence, integrity, and reliability.</p>
+                    <p>Our team of skilled professionals is dedicated to delivering projects on time, within budget, and to the highest quality standards. We believe in building lasting relationships with our clients through transparency and exceptional service.</p>
+                    
+                    <div class="director-info">
+                        <h3>Leadership</h3>
+                        <p>Under the visionary leadership of <strong>Mr. Ravi Chandran</strong>, KSR Groups has established itself as a trusted name in the construction and infrastructure sector. His expertise and commitment to quality drive our company's success.</p>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1503387769-00a112127ca0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Construction Site">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            
+            <p class="section-subtitle">We offer comprehensive solutions in civil construction, pipeline projects, and professional consultancy services.</p>
+            
+            <div class="services-grid">
+                <!-- Civil Construction Service -->
+                <div class="service-card civil">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Civil Construction</h3>
+                    <p>Complete civil construction solutions for residential, commercial, and industrial projects. We handle everything from planning to execution with precision and quality.</p>
+                    
+                    <ul class="service-features">
+                        <li>Building Construction</li>
+                        <li>Infrastructure Development</li>
+                        <li>Structural Works</li>
+                        <li>Site Development</li>
+                        <li>Quality Assurance & Control</li>
+                    </ul>
+                </div>
+                
+                <!-- Pipeline Project Service -->
+                <div class="service-card pipeline">
+                    <div class="service-icon">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h3>Pipeline Projects</h3>
+                    <p>Specialized pipeline installation, maintenance, and repair services for water, oil, gas, and industrial applications. We ensure safe and efficient pipeline systems.</p>
+                    
+                    <ul class="service-features">
+                        <li>Pipeline Installation</li>
+                        <li>Pipeline Maintenance & Repair</li>
+                        <li>Pipeline Inspection</li>
+                        <li>Pipeline Network Design</li>
+                        <li>Compliance & Safety Standards</li>
+                    </ul>
+                </div>
+                
+                <!-- Consultants Service -->
+                <div class="service-card consultant">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Consultancy Services</h3>
+                    <p>Professional consultancy for construction projects, feasibility studies, regulatory compliance, project management, and technical advisory services.</p>
+                    
+                    <ul class="service-features">
+                        <li>Project Feasibility Studies</li>
+                        <li>Construction Management</li>
+                        <li>Technical Advisory</li>
+                        <li>Regulatory Compliance</li>
+                        <li>Cost Estimation & Budgeting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Expertise</h2>
+            </div>
+            
+            <p class="section-subtitle">We have successfully completed numerous projects across different sectors, demonstrating our expertise and capability.</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Civil Construction Project">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Civil Construction</span>
+                        <h3>Commercial Building Projects</h3>
+                        <p>Successful completion of multiple commercial buildings with modern architectural designs and structural integrity.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pipeline Project">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Pipeline Projects</span>
+                        <h3>Industrial Pipeline Network</h3>
+                        <p>Design and installation of comprehensive pipeline networks for industrial applications with focus on safety and efficiency.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Consultancy Project">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Consultancy</span>
+                        <h3>Project Management Consultancy</h3>
+                        <p>Providing expert consultancy services for large-scale construction projects ensuring timely completion and quality standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why-choose">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose KSR Groups</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>We maintain the highest quality standards in all our projects with rigorous quality control measures.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Timely Delivery</h3>
+                    <p>We are committed to completing projects within the agreed timelines without compromising on quality.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Experienced Team</h3>
+                    <p>Our team consists of highly skilled professionals with extensive experience in civil construction and pipeline projects.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Client-Centric Approach</h3>
+                    <p>We prioritize our clients' needs and work closely with them to ensure complete satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            
+            <p class="section-subtitle">Get in touch with us for your civil construction, pipeline project, or consultancy needs. We're here to help!</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Director</h3>
+                            <p>Ravi Chandran</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p><a href="tel:9500661721">+91 9500661721</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:ksrgroup1@outlook.com">ksrgroup1@outlook.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Services Offered</h3>
+                            <p>Civil Construction</p>
+                            <p>Pipeline Projects</p>
+                            <p>Consultancy Services</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 20px; color: var(--primary-color);">Request a Quote</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="civil-construction">Civil Construction</option>
+                                <option value="pipeline-projects">Pipeline Projects</option>
+                                <option value="consultancy">Consultancy Services</option>
+                                <option value="multiple">Multiple Services</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details / Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Please provide details about your project requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="KSR Logo.png" alt="KSR Groups Logo">
+                    <p>Civil Construction | Pipeline Projects | Consultancy</p>
+                    <p>Building Trust • Quality • Growth</p>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#services">Civil Construction</a></li>
+                        <li><a href="#services">Pipeline Projects</a></li>
+                        <li><a href="#services">Consultancy Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: #ccc;">Email: <a href="mailto:ksrgroup1@outlook.com" style="color: #ff8c42;">ksrgroup1@outlook.com</a></p>
+                    <p style="font-size: 0.9rem; color: #ccc;">Phone: <a href="tel:9500661721" style="color: #ff8c42;">+91 9500661721</a></p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 KSR GROUPS. All Rights Reserved. | Professional Civil Construction, Pipeline Projects & Consultancy Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission handling
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            
+            // In a real implementation, you would send this data to a server
+            // For this example, we'll show a success message
+            const serviceNames = {
+                'civil-construction': 'Civil Construction',
+                'pipeline-projects': 'Pipeline Projects',
+                'consultancy': 'Consultancy Services',
+                'multiple': 'Multiple Services'
+            };
+            
+            alert(`Thank you, ${name}! Your request for ${serviceNames[service] || 'our services'} has been received. We will contact you at ${phone} or ${email} within 24 hours.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.padding = '10px 0';
+            } else {
+                header.style.padding = '15px 0';
+            }
+        });
+        
+        // Add current year to copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            const year = new Date().getFullYear();
+            const copyrightElements = document.querySelectorAll('.copyright p');
+            copyrightElements.forEach(element => {
+                element.innerHTML = element.innerHTML.replace('2026', year);
+            });
+        });
+    </script>
+</body>
+</html>
